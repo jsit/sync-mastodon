@@ -131,7 +131,7 @@ class Sync_Mastodon_Admin {
 		check_admin_referer( 'sync-mastodon-settings' );
 
 		// To validate the API token is just a URL
-		$valid_url_regex = '/^https?:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?$/';
+		$valid_url_regex = '/^https?:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}(\/\S*)?$/';
 
 		if ( isset( $_POST['rss-url'] )
 			&& 1 === preg_match( $valid_url_regex, $_POST['rss-url'] )
